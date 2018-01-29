@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Animated Icons</title>
+    <style>
+        
+        html, body {
+            padding: 0;
+            margin:0;
+            background-color: #3d3d3d;
+        }
+
+        .wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 3rem;
+            
+        }
+
+        #battery {
+            font-size: 5rem;
+            margin-top: 3rem;
+            color:#32ff7e;
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    <div id="battery" class="fa"></div>
+    </div>
+
+    <script>
+        //battery charching animation
+        function chargeBattery () {
+            let battery = document.getElementById('battery');
+            battery.innerHTML = "&#xf244;";
+            setTimeout(() => {
+                battery.innerHTML = "&#xf243;";
+            }, 1000);
+            setTimeout(() => {
+                battery.innerHTML = "&#xf242;";
+            }, 2000);
+            setTimeout(() => {
+                battery.innerHTML = "&#xf241;";
+            }, 3000);
+            setTimeout(() => {
+                battery.innerHTML = "&#xf240;";
+            }, 4000);
+            
+        };  
+        // run animation
+        chargeBattery();
+    
+        // set intervals every 5 sec
+        setInterval(chargeBattery, 5000);
+    
+    </script>
+</body>
+</html>
